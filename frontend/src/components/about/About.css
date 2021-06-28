@@ -1,0 +1,46 @@
+
+
+/* *********************************** */
+  /* Styles for the about component */
+/* *********************************** */
+
+/* Picture */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about > img {
+    /* width: 90%;
+    height: 100%; */
+    width: 24rem;
+    padding: 0.3rem;
+    border: 1px solid #e7c9a9;
+}
+
+.about_text > h1 {
+    color: #e7c9a9;
+    text-transform: uppercase;
+}
+
+.about_text > p {
+    font-size: 12pt;
+}
+
+.pdfs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    width: 10rem;
+}
+
+@media(max-width : 468px) {
+    .about > img {
+        width: 10rem;
+    }
+}
+

@@ -1,0 +1,103 @@
+
+/* *********************************** */
+  /* Styles for our home component */
+/* *********************************** */
+
+.wrapper {
+    position: relative;
+    /* background: url(../../images/back1.jpeg) no-repeat; */
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+}
+
+.items {
+    display: flex;
+    position: absolute; /* So I can place particles on top */
+    flex-direction: column; /* Column because we want to layout in column */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* Center */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.header_info {
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 5rem;
+}
+
+.typed {
+    font-size:  2rem;
+    color: #fff;
+    letter-spacing: 5px;
+}
+
+.btn-contact{
+    width: 10rem;
+    height: 4rem;
+    border: 5px solid #e7c9a9;
+    background-color: seashell;
+    text-transform: uppercase;
+    padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+    margin: 2rem;
+}
+
+.btn-contact:hover {
+    text-decoration: none;
+    background-color: lightcoral;
+    transition : .2s ease-in-out;
+}
+
+.tsparticles-canvas-el {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 3;
+}
+
+/* RESPONSIVE FOR SMALLER SCREENS */
+
+@media(max-width: 768px) {
+    /* Making the  Heading Smaller */
+    .btn-contact {
+        width: 7.5rem;
+        height: 3rem;
+    }
+    .typed {
+        font-size : 1rem !important;
+    }
+    .header_info {
+        letter-spacing: 1px;
+        font-size: 1.7rem;
+    }
+}
+
+
+/* Extra */
+
+.carousel, .carousel-inner, .carousel-item {
+    position: absolute;
+    /* display:block !important; */
+    height: 90vh;
+    width: 100%;
+    /* z-index: 1; */
+    /* bottom:0px; */
+}
+
+.carousel-control-prev, .carousel-control-next, .carousel-indicators {
+    z-index: 4 !important;
+}
+
+.carousel-inner > .carousel-item > img {
+    width: 100%;
+    height: 100%; 
+    background: no-repeat;
+    filter: brightness(50%);
+}
