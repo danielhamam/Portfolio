@@ -37,7 +37,7 @@ export class Navigation extends React.Component {
                             <a className={(updated === "About" ? "nav-link active" : "nav-link")} onClick={this.setActive}>About</a>
                         </li>
                         <li className="nav-item">
-                            <a className={(updated === "Services" ? "nav-link active" : "nav-link")} onClick={this.setActive}>Services</a>
+                            <a className={(updated === "Skills" ? "nav-link active" : "nav-link")} onClick={this.setActive}>Skills</a>
                         </li>
                         <li className="nav-item">
                             <a className={(updated === "Portfolio" ? "nav-link active" : "nav-link")} onClick={this.setActive}>Portfolio</a>

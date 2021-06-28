@@ -1,0 +1,55 @@
+
+/* *********************************** */
+  /* Styles for the Skills component */
+/* *********************************** */
+
+.item {
+    /* width: 130px; */
+    /* height: 200px; */
+    
+}
+
+.item > img {
+    width: 50px !important;
+    height: 50px;
+    margin: auto;
+}
+
+.item > figure {
+    width: 200px;
+}
+
+.skills {
+    background-color: #343a40;
+    color: white;
+}
+
+.skills_heading {
+    font-weight: bolder;
+    font-size: 32pt;
+}
+
+@media (max-width: 768px) {
+    .skills_heading {
+        font-size: 28pt;
+    }
+}
+
+.owl-carousel {
+    padding-top: 0.5rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    height: auto;
+    padding-bottom: 4rem;
+  /* margin-left: 4rem; */
+  /* margin-right: 4rem; */
+
+}
+
+/* .owl-carousel > .skill > figure {
+    width:150px;
+}
+.owl-carousel > .skill > figure > h4 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+} */
