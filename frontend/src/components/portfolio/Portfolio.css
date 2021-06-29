@@ -1,0 +1,94 @@
+/* *********************************** */
+  /* Styles for the Portfolio component */
+/* *********************************** */
+
+/*  PORTFOLIO PROJECT */
+
+#portfolio {
+    background : white;
+    padding: 3rem 0;
+}
+
+.portfolio-wrapper {
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin : 1rem;
+}
+
+.proj-image {
+    height: 12rem;
+    width: 17rem;
+    border: 1px solid #e7c9a9;
+    padding: 0.6rem;
+}
+
+.portfolio-holder:hover .portfolio-icon1, .portfolio-holder:hover .portfolio-icon2 {
+    opacity: 70%;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.selecting {
+    position: absolute;
+    opacity : 0;
+    background : black;
+    width: 17rem;
+    height: 12rem;
+    top : 0;
+    border: 4px solid #e7c9a9;
+    cursor: pointer;
+}
+
+.portfolio-holder:hover .selecting {
+    opacity: 55%;
+    transition: 0.4s ease-in-out;
+}
+
+.portfolio-icon1 {
+    position: absolute;
+    opacity: 0;
+    margin-left: -5rem;
+    color: white;
+    font-size: 2.7rem;
+}
+.portfolio-icon2 {
+    position: absolute;
+    opacity: 0;
+    margin-left: 5rem;
+    color: white;
+    font-size: 2.7rem;
+}
+
+/* POPUP */
+
+.popup-title {
+    letter-spacing: 3px;
+}
+
+.pop-up {
+    width: 45rem;
+    padding: 0 0.5rem;
+}
+
+.github {
+    cursor: pointer;
+}
+
+.github:hover {
+    color: darkblue;
+}
+
+/* Media Queries */
+
+@media(max-width: 768px) {
+    .pop-up {
+        width: 100%;
+    }
+}
