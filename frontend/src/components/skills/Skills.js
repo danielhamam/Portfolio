@@ -46,7 +46,7 @@ class Skills extends React.Component {
     render() {
     return (
 
-        <div className="container-fluid skills">
+        <div id="Skills" className="container-fluid skills">
             <div className="row">
                 <div className="col-md-12 text-center pt-5">
                     <h2> 

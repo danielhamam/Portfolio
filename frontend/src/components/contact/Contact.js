@@ -60,7 +60,7 @@ export class Contact extends Component {
     render() {
         const { name, email, loading, phone, subject, message } = this.state;
     return (
-        <div className="contact">
+        <div id="Contact" className="contact">
             <div className="text-center"> 
                 <h1 className="header text-uppercase"> Contact me </h1>
                 <p className="subheader"> Feel free to leave me a message by filling in the blanks and clicking submit. I will respond shortly! </p>

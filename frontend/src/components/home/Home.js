@@ -9,7 +9,7 @@ import test3 from "../../images/test3.jpg"
 
 const Home = () => {
     return (
-        <div className="wrapper">
+        <div id="Home" className="wrapper">
             <div id="carouselExampleIndicators" className="carousel slide" data-interval="false" data-ride="carousel" data-pause="hover">
                 <div className="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>

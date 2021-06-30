@@ -179,7 +179,7 @@ class Portfolio extends React.Component {
     render() {
 
         return (
-            <div id="portfolio">
+            <div id="Portfolio">
                 <div className="container"> 
                     <h1 className = "text-center"> Portfolio </h1>
                     <p className="text-center pb-5"> (Hover & Select Option) </p>

@@ -8,7 +8,7 @@ import { faFilePdf } from '@fortawesome/free-solid-svg-icons'
 
 const About = () => {
     return (
-        <div className="container pt-5 pb-5">
+        <div id="About" className="container pt-5 pb-5">
             <div className="row">
 
                 {/* Two Columns */}

@@ -16,6 +16,8 @@ export class Navigation extends React.Component {
 
     setActive = (e) => {
         this.setState({active : e.target.innerHTML});
+        let title = document.getElementById(e.target.innerHTML)
+        title.scrollIntoView({ behavior : 'smooth' })
     }
     
     render() {
@@ -42,9 +44,9 @@ export class Navigation extends React.Component {
                         <li className="nav-item">
                             <a className={(updated === "Portfolio" ? "nav-link active" : "nav-link")} onClick={this.setActive}>Portfolio</a>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <a className={(updated === "Interests" ? "nav-link active" : "nav-link")} onClick={this.setActive}>Interests</a>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
                             <a className={(updated === "Contact" ? "nav-link active" : "nav-link")} onClick={this.setActive}>Contact</a>
                         </li>

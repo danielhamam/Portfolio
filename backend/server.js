@@ -12,7 +12,7 @@ app.use(cors());
 const PORT = process.env.PORT || 3001;
 console.log(PORT)
 
-// app.use(express.static('build')); // requesting static file index.html, return to client.
+app.use(express.static('build')); // requesting static file index.html, return to client.
 
 app.post('/api/form', (req, res) => {
     let data = req.body
