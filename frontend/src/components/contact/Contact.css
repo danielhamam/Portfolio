@@ -1,0 +1,80 @@
+/* *********************************** */
+  /* Styles for the Contact component */
+/* *********************************** */
+
+.contact {
+    background : #343a40;
+    /* padding : 3rem 0; */
+}
+
+.header {
+    color: #e7c9a9;
+    padding: 1.3rem 0;
+}
+
+.subheader {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.contact input, .contact textarea {
+
+    /* Sizing */  
+    width: 100%;
+    top: 0;
+    margin-bottom: 1rem;
+
+
+    /* Border */
+    border: 0;
+    border-bottom: 0.125rem solid darkgray;
+    border-radius: 0;
+
+    background: none;
+    color: white;
+    box-shadow: none !important;
+}
+
+.contact textarea {
+    height: 12.5rem;
+    resize: none;
+}
+
+.contact, .container {
+    padding: 4.2rem;
+}
+
+.contact input:focus, .contact textarea:focus {
+    background: transparent;
+    color: #e7c9a9;
+    border-bottom: 0.125rem solid #e7c9a9;
+}
+
+
+.submit-btn {
+
+    /* Sizing */
+    height: 3rem;
+    width: 100%;
+
+    /* Styling */
+    background-color: darkslategray !important;
+    border: 2px solid #656565;
+    margin-top: 1.2rem;
+    background: none;
+}
+
+.msg {
+    padding-top: 1rem;
+    color: red;
+}
+
+/* Media Queries */
+
+@media(max-width: 768px) {
+    .contact .container {
+        padding: 0.8rem;
+    }
+}
+
+/*  */
