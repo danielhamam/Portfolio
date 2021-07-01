@@ -26,7 +26,7 @@ app.post('/api/form', (req, res) => {
     host: "smtp-mail.outlook.com", // hostname
     auth: {
             user: 'danielhamam@outlook.com',
-            pass: '',
+            pass: 'Ppuo9u3oy44',
         },
     tls: {
         ciphers:'SSLv3'
