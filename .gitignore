@@ -3,3 +3,4 @@ node_modules
 frontend/.DS_Store
 .env
 .DS_Store
+build
