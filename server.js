@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 require('dotenv').config()
 
-console.log(process.env)
+// console.log(process.env)
 
 const PORT = process.env.PORT || 3001;
 console.log(PORT)
