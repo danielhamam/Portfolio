@@ -1,8 +1,6 @@
 import React from 'react'
 import gradpic from '../../images/about.jpg'
 
-import './About.css'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons'
 

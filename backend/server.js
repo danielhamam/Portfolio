@@ -1,10 +1,9 @@
 const express = require('express');
+const path = require('path')
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const cors = require('cors')
-
 const app = express();
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
@@ -12,7 +11,12 @@ app.use(cors());
 const PORT = process.env.PORT || 3001;
 console.log(PORT)
 
-app.use(express.static('build')); // requesting static file index.html, return to client.
+app.use(express.static(path.join(__dirname, 'build')));
+
+
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 app.post('/api/form', (req, res) => {
     let data = req.body

@@ -4,8 +4,6 @@ import logo from '../../images/selfie.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 
-import './Navigation.css'
-
 export class Navigation extends React.Component {
     constructor () {
         super()

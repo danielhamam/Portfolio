@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
-// Stylesheet
-import './Contact.css';
-
-
 export class Contact extends Component {
     state = {
         name: "",

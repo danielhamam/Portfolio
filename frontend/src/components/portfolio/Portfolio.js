@@ -14,7 +14,6 @@ import {
     PopupboxManager
  } from 'react-popupbox';
 
-import './Portfolio.css'
 import "react-popupbox/dist/react-popupbox.css"
 
 class Portfolio extends React.Component {
@@ -180,7 +179,7 @@ class Portfolio extends React.Component {
 
         return (
             <div id="Portfolio">
-                <div className="container"> 
+                <div className="container-md py-5"> 
                     <h1 className = "text-center"> Portfolio </h1>
                     <p className="text-center pb-5"> (Hover & Select Option) </p>
                     <div className="portfolio-wrapper row"> 

@@ -1,0 +1,33 @@
+.footer {
+    background: #2a2e33;
+    color: white;
+    padding: 3rem;
+}
+
+.footer a {
+    text-decoration: none;
+    color: gray;
+}
+
+.socials {
+    /* padding-left: 5px; */
+    /* float: right !important; */
+}
+
+.social {
+    height: 2.2rem !important;
+    width: 50px !important;
+    float: right;
+}
+
+.copyright:hover {
+    color: #e7c9a9 !important
+}
+
+.social:hover {
+    color: #e7c9a9 !important
+}
+
+@media(max-width: 768px) {
+    
+}

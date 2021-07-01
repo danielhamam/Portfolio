@@ -12,12 +12,7 @@ import sql from './images/sql.png'
 import fcp from './images/fcp.png'
 import lpx from './images/lpx.png'
 
-
 import OwlCarousel from 'react-owl-carousel';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
-
-import './Skills.css'
 
 class Skills extends React.Component {
     constructor() {
@@ -58,7 +53,7 @@ class Skills extends React.Component {
 
             <br />
 
-            <OwlCarousel className="owl-theme items" {...this.state.options}>
+            <OwlCarousel className="owl-theme" {...this.state.options}>
                 <div className="item text-center">
                     <img src={java} alt="Java"/>
                     <h4 className="pt-4"> Java </h4>
