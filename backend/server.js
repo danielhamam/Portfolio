@@ -7,6 +7,9 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
+require('dotenv').config()
+
+console.log(process.env)
 
 const PORT = process.env.PORT || 3001;
 console.log(PORT)
@@ -26,7 +29,7 @@ app.post('/api/form', (req, res) => {
     host: "smtp-mail.outlook.com", // hostname
     auth: {
             user: 'danielhamam@outlook.com',
-            pass: 'Ppuo9u3oy44',
+            pass: process.env.API_PASSWORD
         },
     tls: {
         ciphers:'SSLv3'
