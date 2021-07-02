@@ -15,6 +15,7 @@ const PORT = process.env.PORT || 3001;
 console.log(PORT)
 
 app.use(express.static('build'));
+console.log("here")
 
 app.post('/api/form', (req, res) => {
     console.log("got here1 ")
