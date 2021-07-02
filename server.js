@@ -17,10 +17,11 @@ console.log(PORT)
 app.use(express.static('build'));
 
 app.post('/api/form', (req, res) => {
+    console.log("got here1 ")
     let data = req.body
     let transport = nodemailer.createTransport({
     // port: 465,               // true for 465, false for other ports
-    port: 587, // port for secure SMTP
+    // port: 587, // port for secure SMTP
     host: "smtp-mail.outlook.com", // hostname
     auth: {
             user: 'danielhamam@outlook.com',
@@ -31,7 +32,7 @@ app.post('/api/form', (req, res) => {
     }
     // secure: true,
     });
-    // console.log("good so far")
+    console.log("good so far 2")
     let mailOptions = {
         from: 'danielhamam@outlook.com', // outlook doesn't let you send email from an account you don't own
         to: 'danielhamam@outlook.com',
@@ -49,7 +50,7 @@ app.post('/api/form', (req, res) => {
         <p> ${data.message} </p>
         `
     }
-
+    console.log("about to send")
     transport.sendMail(mailOptions, (error, response) => {
         if (error) {
             console.log(error)
