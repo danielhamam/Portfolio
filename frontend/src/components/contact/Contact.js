@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
+import emailjs from 'emailjs-com';
+
+
 export class Contact extends Component {
     state = {
         name: "",
@@ -13,23 +16,46 @@ export class Contact extends Component {
         sentMessage : ""
       };
 
+    // sendEmail(e) {
+    //     e.preventDefault();
+    
+    //     emailjs.sendForm("service_ID", "template_o4kpux6", e.target, "user_RoFdpEIjph8WBvUX1knWs")
+    //       .then((result) => {
+    //           console.log(result.text);
+    //       }, (error) => {
+    //           console.log(error.text);
+    //       });
+    //   }
+
     handleSubmitForm = (e) => {
-        this.setState({loading : true})
-        console.log("Handling form...");
+
         e.preventDefault();
-        let data = {
-          name : this.state.name,
-          phone : this.state.phone,
-          email : this.state.email,
-          subject : this.state.subject,
-          message: this.state.message
-        }
-        axios.post('/api/form', data)
-        .then( (res) => {
-          this.resetForm()
-        }).catch(() => {
-          console.log("message not sent")
-        })
+        this.setState({loading : true})
+        emailjs.sendForm("service_ID", "template_o4kpux6", e.target, "user_RoFdpEIjph8WBvUX1knWs")
+          .then((result) => { 
+              this.resetForm()
+          }, (error) => {
+            console.log("message not sent")
+          });
+
+
+        // console.log("Handling form...");
+        // e.preventDefault();
+        // let data = {
+        //   name : this.state.name,
+        //   phone : this.state.phone,
+        //   email : this.state.email,
+        //   subject : this.state.subject,
+        //   message: this.state.message
+        // }
+        // axios.post('/api/form', data)
+        // .then( (res) => {
+        //   console.log("THEN")
+        //   this.resetForm()
+        // }).catch(() => {
+        //   console.log("message not sent")
+        // })
+
       }
 
 
@@ -62,10 +88,12 @@ export class Contact extends Component {
                 <p className="subheader"> Feel free to leave me a message by filling in the blanks and clicking submit. I will respond shortly! </p>
             </div>
             <div className = "container">
+                <form onSubmit={this.handleSubmitForm}>
                 <div className="row">
                     <div className="col-md-6 col-xs-12">
 
                         <input 
+                            name="name"
                             id = "contact_name"
                             className="form-control" 
                             placeholder="Name"
@@ -75,6 +103,7 @@ export class Contact extends Component {
                             />
                             {/* Email Address */}
                         <input 
+                            name="email"
                             id="contact_email"
                             className = "form-control"
                             placeholder="Email Address" 
@@ -84,6 +113,7 @@ export class Contact extends Component {
                             />
                         {/* Phone Number */}
                         <input 
+                            name="phone"
                             id="contact_phone"
                             className = "form-control"
                             placeholder="Phone Number" 
@@ -93,6 +123,7 @@ export class Contact extends Component {
                             />
                         {/* Subject  */}
                         <input 
+                            name="subject"
                             id="contact_subject"
                             className = "form-control"
                             placeholder="Subject" 
@@ -104,16 +135,18 @@ export class Contact extends Component {
                     <div className="col-md-6 col-xs-12">
                         {/* Description */}
                         <textarea 
+                            name="description"
                             id="contact_message" 
                             className="form-control" 
                             placeholder="Message" 
                             value={message}
                             onChange={(e) => this.setState({ message: e.target.value })}
                         />
-                        <button disabled={loading ? true : false} type="submit" className="btn-secondary submit-btn" onClick={this.handleSubmitForm}> {loading ? "SUBMITTING" : "SUBMIT"} </button>
+                        <button disabled={loading ? true : false} type="submit" className="btn-secondary submit-btn"> {loading ? "SUBMITTING" : "SUBMIT"} </button>
                         <div className="msg text-center"> {this.state.sentMessage} </div>
                     </div>
                 </div>
+                </form>
             </div>
         </div>
     )}}
