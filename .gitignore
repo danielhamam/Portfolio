@@ -1,6 +1,4 @@
 frontend/node_modules
-node_modules
-frontend/.DS_Store
+backend/node_modules
+DS_Store
 .env
-.DS_Store
-build
