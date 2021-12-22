@@ -37,25 +37,6 @@ export class Contact extends Component {
           }, (error) => {
             console.log("message not sent")
           });
-
-
-        // console.log("Handling form...");
-        // e.preventDefault();
-        // let data = {
-        //   name : this.state.name,
-        //   phone : this.state.phone,
-        //   email : this.state.email,
-        //   subject : this.state.subject,
-        //   message: this.state.message
-        // }
-        // axios.post('/api/form', data)
-        // .then( (res) => {
-        //   console.log("THEN")
-        //   this.resetForm()
-        // }).catch(() => {
-        //   console.log("message not sent")
-        // })
-
       }
 
 
@@ -76,8 +57,6 @@ export class Contact extends Component {
             })
           }, 30000);
     }
-
-
 
     render() {
         const { name, email, loading, phone, subject, message } = this.state;
