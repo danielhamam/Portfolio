@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-
 import emailjs from 'emailjs-com';
-
 
 export class Contact extends Component {
     state = {
@@ -16,17 +14,6 @@ export class Contact extends Component {
         sentMessage : ""
       };
 
-    // sendEmail(e) {
-    //     e.preventDefault();
-    
-    //     emailjs.sendForm("service_ID", "template_o4kpux6", e.target, "user_RoFdpEIjph8WBvUX1knWs")
-    //       .then((result) => {
-    //           console.log(result.text);
-    //       }, (error) => {
-    //           console.log(error.text);
-    //       });
-    //   }
-
     handleSubmitForm = (e) => {
 
         e.preventDefault();
@@ -38,7 +25,6 @@ export class Contact extends Component {
             console.log("message not sent")
           });
       }
-
 
       // For resetting initial data
     resetForm = () => {
