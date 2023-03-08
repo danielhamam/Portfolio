@@ -17,4 +17,4 @@ This portfolio was created by Daniel Hamam. All rights are reserved and must be 
     - npm start
 ```
 
-If you're here for a quick look: 
+If you're here for a quick look: https://danielhamam.github.io/Portfolio/
